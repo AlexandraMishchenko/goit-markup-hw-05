@@ -515,7 +515,7 @@ height: 40px;}
 .footer-conteiner-subscribe-title {
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
   color: #fff;
@@ -524,6 +524,7 @@ height: 40px;}
 }
 .footer-conteiner-subscribe-row {
   display: flex;
+  gap: 24px;
 }
 .footer-conteiner-subscribe-input {
   font-weight: 400;
@@ -534,8 +535,9 @@ height: 40px;}
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 4px;
-  margin-right: 24px;
-width: 100%;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .footer-conteiner-subscribe-btn {
@@ -558,7 +560,7 @@ width: 100%;
 .footer-conteiner-subscribe-btn:focus {
   background-color: #404BBF;
   cursor: pointer;
-  transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;                                                     
   .icon {
     fill: #fff;
   }
@@ -577,7 +579,9 @@ left: 0;
 width: 100vw;
 height: 100vh;
 background-color: #2E2F4266;
-z-index: 10;}
+z-index: 10;
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .modal {
   position: absolute;
@@ -589,6 +593,8 @@ z-index: 10;}
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .modal_close {
   width: 24px;
@@ -605,12 +611,12 @@ z-index: 10;}
   cursor: pointer;
   transition: 0.3s all ease-in-out;
   .icon {
-    fill: #fff;
+    fill: #ffffff;
   }
 }
 .modal_close .icon {
   fill: #000;
-  transition: 0.3s all ease-in-out;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal_title {
   font-weight: 500;
@@ -700,21 +706,22 @@ z-index: 10;}
   letter-spacing: 0.04em;
 }
 .modal_btn {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  min-height: 56px;
+  height: 56px;
   min-width: 196px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   margin: 0 auto;
-  border: none;
-  background-color: #4D5AE5;
+  background-color: #e7e9fc;
   color: #fff;
-  transition: 0.3 all ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal_btn:hover,
